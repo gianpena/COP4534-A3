@@ -58,8 +58,8 @@ int main() {
 
     cout<<"Tasks in resource "<<(i+1)<<":\n";
     for(int task = 0; task < resource.size(); ++task) {
-      auto &p = tasks[resource[task]];
-      cout<<"("<<p.first<<", "<<p.second<<")"<<(task == resource.size() - 1 ? "\n" : ", ");
+      auto &[start, end] = tasks[resource[task]];
+      cout<<"("<<start<<", "<<end<<")"<<(task == resource.size() - 1 ? "\n" : ", ");
     }
   }
   
