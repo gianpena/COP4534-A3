@@ -6,6 +6,6 @@ $(TARGETS): Q1.cpp Q2.cpp Q3.cpp
 	$(CC) -std=gnu++20 Q3.cpp -o Q3
 
 clean:
-	rm $(TARGETS)
+	rm -f $(TARGETS)
 
 .PHONY: clean
