@@ -1,11 +1,17 @@
 CC = g++
-TARGETS = Q1 Q2 Q3
-$(TARGETS): Q1.cpp Q2.cpp Q3.cpp
+
+all: Q1 Q2 Q3
+
+Q1: Q1.cpp
 	$(CC) -std=gnu++20 Q1.cpp -o Q1
+
+Q2: Q2.cpp
 	$(CC) -std=gnu++20 Q2.cpp -o Q2
+
+Q3: Q3.cpp
 	$(CC) -std=gnu++20 Q3.cpp -o Q3
 
 clean:
-	rm -f $(TARGETS)
+	rm -f Q1 Q2 Q3
 
-.PHONY: clean
+.PHONY: clean all
